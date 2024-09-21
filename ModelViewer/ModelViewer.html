@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Model Viewer</title>
+
+    <!-- Import the Model Viewer library -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+<!-- Model Viewer component -->
+<model-viewer
+        src="ModelViewer/3d_Model/old_wooden_table_and_chair.glb"
+        ios-src="ModelViewer/3d_Model/Old_wooden_table_and_chair.usdz"
+        alt="A 3D model of something"
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        environment-image="neutral"
+        auto-rotate
+        camera-controls>
+</model-viewer>
+
+</body>
+</html>
