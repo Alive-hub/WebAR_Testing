@@ -16,7 +16,27 @@
             pointer-events: none;
         }
 
+        .hotspot[slot="hotspot-hand"]{
+            --min-hotspot-opacity: 0;
+            background-color: red;
+        }
 
+        .hotspot[slot="hotspot-foot"]:not([data-visible]) {
+            background-color: transparent;
+            border: 3px solid blue;
+        }
+
+        .annotation{
+            background-color: #888888;
+            position: absolute;
+            transform: translate(10px, 10px);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        /* This keeps child nodes hidden while the element loads */
+        :not(:defined) > * {
+            display: none;
+        }
     </style>
 
     <!-- Import the Model Viewer library -->
@@ -24,20 +44,27 @@
 </head>
 <body>
 <!-- Model Viewer component -->
-<model-viewer
-        src="ModelViewer/3d_Model/old_wooden_table_and_chair.glb"
-        ios-src="ModelViewer/3d_Model/Old_wooden_table_and_chair.usdz"
-        alt="A 3D model of something"
-        ar
-        ar-modes="scene-viewer webxr quick-look"
-        scale="0.1 0.1 0.1"
-        environment-image="neutral"
-        auto-rotate
-        shadow-intensity="2"
-        touch
-        camera-controls
-        style="width: 100%; height: 500px;">
-</model-viewer>
+<!--<model-viewer-->
+<!--        src="ModelViewer/3d_Model/old_wooden_table_and_chair.glb"-->
+<!--        ios-src="ModelViewer/3d_Model/Old_wooden_table_and_chair.usdz"-->
+<!--        alt="A 3D model of something"-->
+<!--        ar-->
+<!--        ar-modes="scene-viewer webxr quick-look"-->
+<!--        scale="0.1 0.1 0.1"-->
+<!--        environment-image="neutral"-->
+<!--        auto-rotate-->
+<!--        shadow-intensity="2"-->
+<!--        touch-->
+<!--        camera-controls-->
+<!--        style="width: 100%; height: 500px;">-->
 
+
+<!--    <button class="hotspot" slot="hotspot-hand" data-position="-0.0 0.00 0.1" data-normal="-0.00 0.05 0.00">-->
+<!--        <div class="annotation">This hotspot disappears completely</div>-->
+<!--    </button>-->
+
+<!--</model-viewer>-->
+
+<a href="ModelViewer/AFrame.html">Start Web AR</a>
 </body>
 </html>
