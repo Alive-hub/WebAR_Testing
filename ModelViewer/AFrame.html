@@ -12,7 +12,6 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            border: 10px solid red; /* Customize frame color */
             z-index: 9999;
             pointer-events: none;
         }
@@ -28,7 +27,12 @@
 >
     <!-- Define AR marker -->
     <a-marker preset="hiro">
-        <a-box position="0 0.5 0" material="color: blue;"></a-box>
+        <!-- Load 3D model -->
+        <a-gltf-model
+                src="3d_Model/old_wooden_table_and_chair.glb"
+                scale="0.5 0.5 0.5"
+                position="0 0 0">
+        </a-gltf-model>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
